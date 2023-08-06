@@ -11,6 +11,9 @@
     margin: 8px 8px 0 8px;
     border-radius: 8px;
 }
+.product {
+    margin: auto;
+}
 .product-item {
     padding: 12px 0 12px 14px;
 }
@@ -44,6 +47,7 @@
     position: absolute;
     bottom: 0;
     border-radius: 0 0 8px 8px;
+    border: none;
 }
 .product button:hover {
     background-color: orange;

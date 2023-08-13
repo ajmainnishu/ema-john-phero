@@ -7,6 +7,8 @@ import ManageInventory from './components/ManageInventory/ManageInventory.jsx'
 import Login from './components/Login/Login.jsx'
 import Products from './components/Products/Products.jsx'
 import cartProducts from './Utilities/cartProducts.js'
+import ProceedCheckout from './components/ProceedCheckout/ProceedCheckout.jsx'
+import EmptyPage from './components/EmptyPage/EmptyPage.jsx'
 
 const router = createBrowserRouter([
   {
@@ -29,6 +31,14 @@ const router = createBrowserRouter([
       {
         path: 'login',
         element: <Login />
+      },
+      {
+        path: 'proceed',
+        element: <ProceedCheckout />
+      },
+      {
+        path: '*',
+        element: <EmptyPage />
       }
     ]
   }

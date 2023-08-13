@@ -57,7 +57,7 @@ const Products = () => {
             <div className='order-summary'>
                 <Cart cart={cart} clearData={clearData}>
                     <div>
-                        <Link><button id='btn-order'>Review Order&nbsp;<FontAwesomeIcon  icon={faArrowRight}/></button></Link>
+                        <Link to='/review'><button id='btn-order'>Review Order&nbsp;<FontAwesomeIcon  icon={faArrowRight}/></button></Link>
                     </div>
                 </Cart>
             </div>

@@ -1,7 +1,7 @@
 const ManageInventory = () => {
     return (
         <div>
-            <h2>Manage Inventory</h2>
+            <h2 style={{textAlign: 'center', padding: '60px', fontSize: '60px'}}>Coming Soon!!!</h2>
         </div>
     );
 };

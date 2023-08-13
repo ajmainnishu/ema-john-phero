@@ -1,0 +1,10 @@
+.empty-page-text {
+    text-align: center;
+    color: #2A414F;
+    font-size: 62px;
+    font-weight: 300;
+    padding: 100px;
+}
+.orange-bar {
+    color: rgba(255, 153, 0, 1);
+}

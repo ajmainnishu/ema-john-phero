@@ -1,7 +1,6 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faTrashAlt } from '@fortawesome/free-solid-svg-icons'
 import './Cart.css'
-import { clearFromDb } from '../../Utilities/fakedb';
 
 const Cart = ({cart, clearData, children}) => {
     let totalPrice = 0;

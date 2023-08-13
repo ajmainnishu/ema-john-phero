@@ -29,7 +29,7 @@ const OrderReview = () => {
             <div className='order-summary-container'>
                 <Cart cart={cart} clearData={clearData}>
                     <div>
-                        <Link><button id='btn-order'>Proceed Checkout&nbsp;<FontAwesomeIcon  icon={faArrowRight}/></button></Link>
+                        <Link to='/proceed'><button id='btn-order'>Proceed Checkout&nbsp;<FontAwesomeIcon  icon={faArrowRight}/></button></Link>
                     </div>
                 </Cart>
             </div>

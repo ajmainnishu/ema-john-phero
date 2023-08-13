@@ -3,7 +3,7 @@ import { faTrashAlt } from '@fortawesome/free-solid-svg-icons'
 import './Cart.css'
 import { clearFromDb } from '../../Utilities/fakedb';
 
-const Cart = ({cart}) => {
+const Cart = ({cart, clearData, children}) => {
     let totalPrice = 0;
     let shippingPrice = 0;
     let quantity = 0;
@@ -14,10 +14,6 @@ const Cart = ({cart}) => {
     }
     const tax = totalPrice * 7 / 100;
     const grandTotal = totalPrice + shippingPrice + tax;
-    const clearData = () => {
-        clearFromDb();
-        
-    }
     return (
         <div className='cart-container'>
             <h5>Order Summary</h5>
@@ -28,7 +24,8 @@ const Cart = ({cart}) => {
                 <p>Tax: ${tax.toFixed(2)}</p>
                 <h6>Grand Total: ${grandTotal.toFixed(2)}</h6>
             </div>
-            <button onClick={() => clearData()}>Clear Cart&nbsp;<FontAwesomeIcon icon={faTrashAlt} /></button>
+            <button onClick={clearData}>Clear Cart&nbsp;<FontAwesomeIcon icon={faTrashAlt} /></button>
+            {children}
         </div>
     );
 };

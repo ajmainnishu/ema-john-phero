@@ -8,7 +8,18 @@
     grid-gap: 45px;
     padding: 120px 84px 120px 84px;
 }
-
 .order-summary {
     background: rgba(255, 153, 0, 0.30);
+}
+#btn-order {
+    text-decoration: none;
+    background-color: rgba(255, 153, 0, 1);
+    border-radius: 4px;
+    color: white;
+    font-size: 17px;
+    font-weight: 400;
+    padding: 14px 0;
+    width: 100%;
+    border: 0;
+    margin: 16px 0;
 }

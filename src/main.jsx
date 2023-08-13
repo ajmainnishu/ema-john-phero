@@ -6,6 +6,7 @@ import OrderReview from './components/OrderReview/OrderReview.jsx'
 import ManageInventory from './components/ManageInventory/ManageInventory.jsx'
 import Login from './components/Login/Login.jsx'
 import Products from './components/Products/Products.jsx'
+import cartProducts from './Utilities/cartProducts.js'
 
 const router = createBrowserRouter([
   {
@@ -18,7 +19,8 @@ const router = createBrowserRouter([
       },
       {
         path: 'review',
-        element: <OrderReview />
+        element: <OrderReview />,
+        loader: cartProducts
       },
       {
         path: 'manage',

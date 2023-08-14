@@ -29,6 +29,7 @@ const Products = () => {
         }
         setCart(savedCart);
     }, [products])
+    // product file button
     const btnAddtoCart = (product) => {
         let newCart = [];
         const exists = cart.find(pd => pd.id === product.id);
@@ -43,6 +44,7 @@ const Products = () => {
         setCart(newCart);
         addToDb(product.id)
     }
+    // cart file button
     const clearData = () => {
         setCart([]);
         clearFromDb();

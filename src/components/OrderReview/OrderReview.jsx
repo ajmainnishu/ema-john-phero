@@ -10,11 +10,13 @@ import { faArrowRight } from '@fortawesome/free-solid-svg-icons'
 const OrderReview = () => {
     const savedCart = useLoaderData();
     const [cart, setCart] = useState(savedCart);
+    // orderitem file button
     const handleDeleteItem = id => {
         const remainingCart = cart.filter(pd => pd.id !== id);
         setCart(remainingCart);
         deleteItemFromDb(id);
     }
+    // cart file button
     const clearData = () => {
         setCart([]);
         clearFromDb();

@@ -1,11 +1,10 @@
 import { Link } from 'react-router-dom';
-import './Login.css'
 import GooglePhoto from '../../assets/google.svg'
 
-const Login = () => {
+const Register = () => {
     return (
         <div className='login-container'>
-            <h4 className="login-heading">Login</h4>
+            <h4 className="login-heading">Sign Up</h4>
             <form>
                 <div className="form-control">
                     <label htmlFor="email">Email</label>
@@ -15,9 +14,13 @@ const Login = () => {
                     <label htmlFor="password">Password</label>
                     <input type="password" name="password" id="password" />
                 </div>
+                <div className="form-control">
+                    <label htmlFor="cPassword">Confirm Password</label>
+                    <input type="password" name="cPassword" id="cPassword" />
+                </div>
                 <input className='btn-login' type="submit" value="Login" />
             </form>
-            <p className='login-register-text'>New to Ema-john? <Link to={`/register`}>Create New Account</Link></p>
+            <p className='login-register-text'>Already have an account? <Link to={`/login`}>Sign Up</Link></p>
             <div className='hr'>
                 <div className='hr-left'><hr /></div>
                 <div className='hr-text'>or</div>
@@ -28,4 +31,4 @@ const Login = () => {
     );
 };
 
-export default Login;
+export default Register;

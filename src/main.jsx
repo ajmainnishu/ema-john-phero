@@ -11,6 +11,9 @@ import ProceedCheckout from './components/ProceedCheckout/ProceedCheckout.jsx'
 import EmptyPage from './components/EmptyPage/EmptyPage.jsx'
 import Register from './components/Register/Register.jsx'
 import Home from './components/Home/Home.jsx'
+import AuthProvider from './components/provider/AuthProvider.jsx'
+import 'react-toastify/dist/ReactToastify.css';
+import PrivateRoute from './components/provider/PrivateRoute.jsx'
 
 const router = createBrowserRouter([
   {
@@ -23,16 +26,16 @@ const router = createBrowserRouter([
       },
       {
         path: '/products',
-        element: <Products />
+        element: <PrivateRoute><Products /></PrivateRoute>
       },
       {
         path: 'review',
-        element: <OrderReview />,
+        element: <PrivateRoute><OrderReview /></PrivateRoute>,
         loader: cartProducts
       },
       {
         path: 'manage',
-        element: <ManageInventory />
+        element: <PrivateRoute><ManageInventory /></PrivateRoute>
       },
       {
         path: 'login',
@@ -44,7 +47,7 @@ const router = createBrowserRouter([
       },
       {
         path: 'proceed',
-        element: <ProceedCheckout />
+        element: <PrivateRoute><ProceedCheckout /></PrivateRoute>
       },
       {
         path: '*',
@@ -56,6 +59,8 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <RouterProvider router={router}></RouterProvider>
+    <AuthProvider>
+      <RouterProvider router={router}></RouterProvider>
+    </AuthProvider>
   </React.StrictMode>,
 )

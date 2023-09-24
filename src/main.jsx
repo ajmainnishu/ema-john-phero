@@ -10,6 +10,7 @@ import cartProducts from './Utilities/cartProducts.js'
 import ProceedCheckout from './components/ProceedCheckout/ProceedCheckout.jsx'
 import EmptyPage from './components/EmptyPage/EmptyPage.jsx'
 import Register from './components/Register/Register.jsx'
+import Home from './components/Home/Home.jsx'
 
 const router = createBrowserRouter([
   {
@@ -18,6 +19,10 @@ const router = createBrowserRouter([
     children: [
       {
         path: '/',
+        element: <Home />
+      },
+      {
+        path: '/products',
         element: <Products />
       },
       {
